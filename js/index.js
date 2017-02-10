@@ -10,7 +10,11 @@ $(document).ready(function(){
   $('#spinningarea').hide()
 	$('#pick6').hide()
 	$('#picksixbutton').on('click', showPickSix);
-	$('#gospin').on('click', showWheelSpin)
+	$('#showspin').on('click', showWheelSpin)
+	$('#gospin').on('click', showWheelSpinUpdate)
+
+	$('#home').on('click', showHome)
+
 	/*WHEEL SPIN FUNCTION*/
 	$('#spin').click(function(){
 		//add 1 every click
@@ -66,9 +70,18 @@ $(document).ready(function(){
 		$('#landing, #spinningarea').hide()
 	}
 	function showWheelSpin(){
-		alert('hello')
 		$('#spinningarea').show()
 		$('#landing, #pick6').hide()
+	}
+	function showHome(){
+		$('#landing').show()
+		$('#spinningarea, #pick6').hide()
+	}
+	function showWheelSpinUpdate(){
+		$('#spinningarea').show()
+		$('#landing, #pick6').hide()
+
+		alert($('.location1').text())
 	}
 
 
