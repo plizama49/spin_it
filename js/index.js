@@ -10,7 +10,11 @@ $(document).ready(function(){
   $('#spinningarea').hide()
 	$('#pick6').hide()
 	$('#picksixbutton').on('click', showPickSix);
-	$('#gospin').on('click', showWheelSpin)
+	$('#showspin').on('click', showWheelSpin)
+	$('#gospin').on('click', showWheelSpinUpdate)
+
+	$('#home').on('click', showHome)
+
 	/*WHEEL SPIN FUNCTION*/
 	$('#spin').click(function(){
 		//add 1 every click
@@ -66,9 +70,28 @@ $(document).ready(function(){
 		$('#landing, #spinningarea').hide()
 	}
 	function showWheelSpin(){
-		alert('hello')
 		$('#spinningarea').show()
 		$('#landing, #pick6').hide()
+	}
+	function showHome(){
+		$('#landing').show()
+		$('#spinningarea, #pick6').hide()
+	}
+	function showWheelSpinUpdate(){
+		$('#spinningarea').show()
+		$('#landing, #pick6').hide()
+		var part1 = $('#location1').val();
+		var part2 = $('#location2').val();
+		var part3 = $('#location3').val();
+		var part4 = $('#location4').val();
+		var part5 = $('#location5').val();
+		var part6 = $('#location6').val();
+		$('#1').text(part1)
+		$('#2').text(part2)
+		$('#3').text(part3)
+		$('#4').text(part4)
+		$('#5').text(part5)
+		$('#6').text(part6)
 	}
 
 
