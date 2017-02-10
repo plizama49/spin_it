@@ -7,28 +7,26 @@ var degree = 4200;
 var clicks = 0;
 
 $(document).ready(function(){
-
+  $('#spinningarea').hide()
+	$('#pick6').hide()
+	$('#picksixbutton').on('click', showPickSix);
+	$('#gospin').on('click', showWheelSpin)
 	/*WHEEL SPIN FUNCTION*/
 	$('#spin').click(function(){
-
 		//add 1 every click
 		clicks ++;
-
 		/*multiply the degree by number of clicks
 	  generate random number between 1 - 360,
     then add to the new degree*/
 		var newDegree = degree*clicks;
 		var extraDegree = Math.floor(Math.random() * (360 - 1 + 1)) + 1;
 		totalDegree = newDegree+extraDegree;
-
-
 		/*let's make the spin btn to tilt every
 		time the edge of the section hits
 		the indicator*/
 		$('#wheel .sec').each(function(){
 			var t = $(this);
 			var noY = 0;
-
 			var c = 0;
 			var n = 700;
 			var interval = setInterval(function () {
@@ -36,7 +34,6 @@ $(document).ready(function(){
 				if (c === n) {
 					clearInterval(interval);
 				}
-
 				var aoY = t.offset().top;
 				$("#txt").html(aoY);
 				console.log(aoY);
@@ -44,7 +41,6 @@ $(document).ready(function(){
 				setTimeout(function () {
 					$('.alertbulb').addClass('rotateIn').css('display','block')
 				}, 6000);
-
 				/*23.7 is the minumum offset number that
 				each section can get, in a 30 angle degree.
 				So, if the offset reaches 23.7, then we know
@@ -58,22 +54,26 @@ $(document).ready(function(){
 					}, 100);
 				}
 			}, 10);
-
 			$('#inner-wheel').css({
 				'transform' : 'rotate(' + totalDegree + 'deg)'
 			});
-
 			noY = t.offset().top;
-
 		});
 	});
 
+	function showPickSix(){
+		$('#pick6').show()
+		$('#landing, #spinningarea').hide()
+	}
+	function showWheelSpin(){
+		alert('hello')
+		$('#spinningarea').show()
+		$('#landing, #pick6').hide()
+	}
 
-	// Wheel Input
 
 
 
 
 
-
-});//DOCUMENT READY
+});

@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <title>SPIN IT</title>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" media="screen" type="text/css" />
-
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
-
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
     <!-- NAVIGATION -->
-
     <div class="container">
       <div class="navbar">
         <ul>
@@ -31,14 +28,9 @@
         </ul>
       </div>
 
-      <!-- <div class="container">
-        <div class="navbar">
-          <a href="home.html" class="nav">HOME</a>
-          <a href="pick6.html" class="nav">PICK</a>
-          <a href="spin.html" class="nav">SPIN</a>
-        </div> -->
 
-      <!-- THE WHEEL -->
+
+      <!-- Landing Area -->
       <div class="container">
         <div class="wrapper">
           <img src="bigspinner.png" class="bigwheel" height="325px" width="325px">
@@ -50,5 +42,128 @@
         </div>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="js/index.js"></script>
+
+          <!-- THE WHEEL -->
+      <div id="spinningarea">
+          <div id="wrapper">
+            <img src="alertbulb.png" class="alertbulb animate animated" />
+            <div id="wheel">
+              <div id="inner-wheel">
+                <div class="sec" id="1">
+                  <div class="fa opt1">Hopdoddy Burger Bar</div>
+                </div>
+                <div class="sec" id="2">
+                  <div class="fa opt1">Crawfish Shack</div>
+                </div>
+                <div class="sec" id="3">
+                  <div class="fa opt1">Sushi Nini</div>
+                </div>
+                <div class="sec" id="4">
+                  <div class="fa opt4">Asia Cafe</div>
+                </div>
+                <div class="sec" id="5">
+                  <div class="fa opt5">Gus' Fried Chicken</div>
+                </div>
+                <div class="sec" id="6">
+                  <div class="fa opt6">Jack Allen's Kitchen</div>
+                </div>
+              </div>
+              <div id="spin">
+                <div id="inner-spin">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PICK AND CHOOSE -->
+          <div class="row">
+            <!-- CATEGORY -->
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-8">
+              <div class="category">
+                <!-- Future Button to spin -->
+                <!-- <div><img src="inner-spinner.png" class="spin" height="64px " width="64px "></div> -->
+                <input type="text " class="category-form-control " placeholder="CATEGORY ">
+              </div>
+              <button type="button " class="reset" name="reset ">RESET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pick6">
+        <div class="container">
+          <div>
+            <input type="image" src="spin-it-logo.png" name="spinlogo" class="btTxt submit" height="131px" width="250px" />
+          </div>
+          <!-- PICK AND CHOOSE -->
+          <div class="row">
+            <!-- CATEGORY -->
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-8">
+              <div class="category">
+                <input type="text" class="category-form-control" placeholder="CATEGORY">
+              </div>
+            </div>
+
+            <!-- INPUT SELECTIONS -->
+            <!-- /input-group -->
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-8">
+              <div class="input-group">
+                <span class="input-group-addon">
+              <!-- <input type="radio" aria-label="..."> -->
+              </span>
+                <input type="text" class="form-control" aria-label="..." placeholder="Add Selection">
+              </div>
+            </div>
+            <!-- /input-group -->
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-8">
+              <div class="input-group">
+                <span class="input-group-addon">
+              <!-- <input type="radio" aria-label="..."> -->
+              </span>
+                <input type="text" class="form-control" aria-label="..." placeholder="Add Selection">
+              </div>
+            </div>
+            <!-- /input-group -->
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-8">
+              <div class="input-group">
+                <span class="input-group-addon">
+              <!-- <input type="radio" aria-label="..."> -->
+              </span>
+                <input type="text" class="form-control" aria-label="..." placeholder="Add Selection">
+              </div>
+            </div>
+            <!-- /input-group -->
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-8">
+              <div class="input-group">
+                <span class="input-group-addon">
+              <!-- <input type="radio" aria-label="..."> -->
+              </span>
+                <input type="text" class="form-control" aria-label="..." placeholder="Add Selection">
+              </div>
+            </div>
+            <!-- /input-group -->
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-8">
+              <div class="input-group">
+                <span class="input-group-addon">
+              <!-- <input type="radio" aria-label="..."> -->
+              </span>
+                <input type="text" class="form-control" aria-label="..." placeholder="Add Selection">
+              </div>
+            </div>
+            <!-- /input-group -->
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-8">
+              <div class="input-group">
+                <span class="input-group-addon">
+              <!-- <input type="radio" aria-label="..."> -->
+              </span>
+                <input type="text" class="form-control" aria-label="..." placeholder="Add Selection">
+              </div>
+            </div>
+            <button type="button" class="add-btn" name="button"> SPIN </button>
+            <!-- <button class="spinbutton"><img src="spinbutton.png" height="75px" width="75px"></button> -->
+
+          </div>
+        </div>
+      </div>
+
 
 </html>
